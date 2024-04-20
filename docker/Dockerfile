@@ -13,6 +13,9 @@ RUN apk add --no-cache chromium
 ENV PUPPETEER_SKIP_DOWNLOAD=true
 ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
 
+# Install the specific version of pnpm
+RUN npm install -g pnpm@8.14.0
+
 # You can install a specific version like: flowise@1.0.0
 RUN npm install -g flowise
 
