@@ -18,6 +18,9 @@ RUN npm install -g pnpm
 ENV PUPPETEER_SKIP_DOWNLOAD=true
 ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
 
+# Install the specific version of pnpm
+RUN npm install -g pnpm@8.14.0
+
 WORKDIR /usr/src
 
 # Copy app source
